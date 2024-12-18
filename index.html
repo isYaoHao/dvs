@@ -1,141 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh">
 
-<!DOCTYPE html>  
-<html lang="zh">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>公司官网</title>  
-    <script src="https://cdn.tailwindcss.com"></script>  
-</head>  
-<body>  
-    <!-- 导航栏 -->  
-    <nav class="bg-white shadow-lg fixed w-full z-50">  
-        <div class="max-w-7xl mx-auto px-4">  
-            <div class="flex justify-between items-center h-16">  
-                <div class="flex-shrink-0">  
-                    <span class="text-2xl font-bold">Logo</span>  
-                </div>  
-                <div class="hidden md:block">  
-                    <div class="ml-10 flex items-center space-x-4">  
-                        <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2">首页</a>  
-                        <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2">产品</a>  
-                        <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2">服务</a>  
-                        <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2">关于我们</a>  
-                        <a href="#" class="text-gray-700 hover:text-gray-900 px-3 py-2">联系我们</a>  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代企业官网</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 添加AOS动画库 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- 添加图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #4F46E5, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-lg fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold gradient-text">TechCorp</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors duration-300">首页</a>
+                        <a href="#"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors duration-300">产品</a>
+                        <a href="#"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors duration-300">服务</a>
+                        <a href="#"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors duration-300">案例</a>
+                        <a href="#"
+                            class="text-gray-700 hover:text-blue-600 px-3 py-2 transition-colors duration-300">关于</a>
+                        <button
+                            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">联系我们</button>
+                    </div>
+                </div>
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-gray-900">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div data-aos="fade-right">
+                    <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">
+                        <span class="block">引领创新</span>
+                        <span class="block gradient-text">驱动未来发展</span>
+                    </h1>
+                    <p class="mt-6 text-xl text-gray-600 leading-relaxed">
+                        我们致力于为企业提供创新的技术解决方案，助力企业数字化转型，实现可持续发展。
+                    </p>
+                    <div class="mt-8 flex space-x-4">
+                        <button
+                            class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transform hover:-translate-y-1 transition-all duration-300">
+                            开始体验
+                        </button>
+                        <button
+                            class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transform hover:-translate-y-1 transition-all duration-300">
+                            了解更多
+                        </button>
+                    </div>
+                </div>
+                <div class="animate-float" data-aos="fade-left">
+                    <!-- 这里可以放置一个hero图片 -->
+                    <div class="bg-blue-100 h-96 rounded-2xl shadow-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">1000+</div>
+                    <div class="text-gray-600">服务客户</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                    <div class="text-gray-600">解决方案</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                    <div class="text-gray-600">客户满意度</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                    <div class="text-gray-600">技术支持</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">创新产品</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    我们提供全方位的解决方案，满足您的各种需求
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 产品卡片 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-blue-100"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">智能解决方案</h3>
+                        <p class="text-gray-600 mb-4">运用人工智能技术，为企业提供智能化解决方案。</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">了解更多 →</a>
+                    </div>
+                </div>
+                <!-- 产品卡片 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-green-100"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">云服务平台</h3>
+                        <p class="text-gray-600 mb-4">安全可靠的云计算服务，助力企业数字化转型。</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">了解更多 →</a>
+                    </div>
+                </div>
+                <!-- 产品卡片 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-purple-100"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">数据分析</h3>
+                        <p class="text-gray-600 mb-4">深度数据分析，助您洞察市场趋势和商业机会。</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">了解更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户评价 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">客户评价</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 评价卡片 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 mb-6">"使用他们的解决方案后，我们的效率提升了50%以上，非常满意！"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold">张总</div>
+                            <div class="text-gray-500">某科技公司 CEO</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 评价卡片 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 mb-6">"专业的团队，优质的服务，是值得信赖的长期合作伙伴。"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold">李总</div>
+                            <div class="text-gray-500">某集团 CTO</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 评价卡片 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-yellow-400 mb-4">
+                        ★★★★★
+                    </div>
+                    <p class="text-gray-600 mb-6">"产品性能稳定，售后服务及时，非常推荐！"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <div class="font-bold">王总</div>
+                            <div class="text-gray-500">某企业 总经理</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-8">联系我们</h2>
+                    <p class="text-gray-600 mb-8">
+                        无论您有任何问题或需求，我们都随时准备为您提供专业的解答和支持。
+                    </p>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">姓名</label>
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">邮箱</label>
+                            <input type="email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring                            <input type="
+                                email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">电话</label>
+                            <input type="tel"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">留言内容</label>
+                            <textarea rows="4"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300"></textarea>
+                        </div>
+                        <button
+                            class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transform hover:-translate-y-1 transition-all duration-300">
+                            提交信息
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 p-3 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">公司地址</h3>
+                                <p class="text-gray-600">上海市浦东新区某某路888号</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 p-3 rounded-lg">
+                                <i class="fas fa-phone text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">联系电话</h3>
+                                <p class="text-gray-600">400-888-8888</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">电子邮箱</h3>
+                                <p class="text-gray-600">contact@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队介绍 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">核心团队</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    由行业精英组成的专业团队，为您提供最优质的服务
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- 团队成员 1 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full bg-gray-300"></div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">张三</h3>
+                    <p class="text-gray-600">首席执行官</p>
+                </div>
+                <!-- 团队成员 2 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full bg-gray-300"></div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">李四</h3>
+                    <p class="text-gray-600">技术总监</p>
+                </div>
+                <!-- 团队成员 3 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full bg-gray-300"></div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">王五</h3>
+                    <p class="text-gray-600">产品经理</p>
+                </div>
+                <!-- 团队成员 4 -->
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative group">
+                        <div
+                            class="w-48 h-48 mx-auto rounded-full overflow-hidden mb-4 transform group-hover:scale-105 transition-transform duration-300">
+                            <div class="w-full h-full bg-gray-300"></div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-300">
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">赵六</h3>
+                    <p class="text-gray-600">市场总监</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">新闻动态</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    了解我们最新的动态和行业资讯
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 新闻卡片 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">2024-12-18</div>
+                        <h3 class="text-xl font-bold mb-2">公司荣获2024年度创新企业奖</h3>
+                        <p class="text-gray-600 mb-4">在近日举办的2024年度科技创新大会上，我公司凭借突出的创新能力...</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">阅读更多 →</a>
+                    </div>
+                </div>
+                <!-- 新闻卡片 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">2024-12-15</div>
+                        <h3 class="text-xl font-bold mb-2">新一代产品发布会圆满成功</h3>
+                        <p class="text-gray-600 mb-4">公司最新研发的智能解决方案在上海成功发布，获得业界广泛关注...</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">阅读更多 →</a>
+                    </div>
+                </div>
+                <!-- 新闻卡片 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform hover:-translate-y-2 transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">2024-12-10</div>
+                        <h3 class="text-xl font-bold mb-2">战略合作伙伴签约仪式</h3>
+                        <p class="text-gray-600 mb-4">我公司与多家知名企业达成战略合作，共同推进产业数字化转型...</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">阅读更多 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold gradient-text">TechCorp</h3>
+                    <p class="text-gray-400">
+                        致力于为企业提供创新的技术解决方案，推动产业数字化转型。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weixin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-weibo text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">关于我们</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">产品服务</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">解决方案</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">新闻动态</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">加入我们</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">联系方式</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt text-gray-400"></i>
+                            <span class="text-gray-400">上海市浦东新区某某路888号</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone text-gray-400"></i>
+                            <span class="text-gray-400">400-888-8888</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <span class="text-gray-400">contact@example.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">订阅我们</h4>
+                    <p class="text-gray-400 mb-4">订阅我们的新闻，获取最新资讯</p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="请输入您的邮箱"
+                            class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500">
+                        <button <button
+                            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                            订阅
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 TechCorp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 初始化脚本 -->
+    <script>
+        // 初始化 AOS  
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // 导航栏滚动效果  
+        const navbar = document.getElementById('navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // 导航栏阴影效果  
+            if (scrollTop > 0) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+
+            // 返回顶部按钮显示/隐藏  
+            const backToTopBtn = document.getElementById('backToTop');
+            if (scrollTop > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        // 返回顶部功能  
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 平滑滚动  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 表单提交处理  
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // 这里添加表单提交逻辑  
+                alert('提交成功！');
+                form.reset();
+            });
+        });
+
+        // 添加图片加载动画  
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', () => {
+                    img.classList.add('opacity-100');
+                });
+            });
+        });
+
+        // 移动端菜单  
+        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'mobile-menu fixed inset-0 bg-gray-900 bg-opacity-50 z-50 hidden';
+        mobileMenu.innerHTML = `  
+            <div class="bg-white h-screen w-64 transform -translate-x-full transition-transform duration-300">  
+                <div class="p-6">  
+                    <div class="flex justify-between items-center mb-8">  
+                        <span class="text-2xl font-bold gradient-text">TechCorp</span>  
+                        <button class="text-gray-700 hover:text-gray-900">  
+                            <i class="fas fa-times text-2xl"></i>  
+                        </button>  
                     </div>  
+                    <nav class="space-y-4">  
+                        <a href="#" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300">首页</a>  
+                        <a href="#" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300">产品</a>  
+                        <a href="#" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300">服务</a>  
+                        <a href="#" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300">案例</a>  
+                        <a href="#" class="block text-gray-700 hover:text-blue-600 transition-colors duration-300">关于</a>  
+                    </nav>  
                 </div>  
             </div>  
-        </div>  
-    </nav>  
+        `;
+        document.body.appendChild(mobileMenu);
 
-    <!-- Hero Section -->  
-    <section class="pt-20 bg-gray-50">  
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">  
-            <div class="text-center">  
-                <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">  
-                    <span class="block">创新科技</span>  
-                    <span class="block text-blue-600">引领未来</span>  
-                </h1>  
-                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl">  
-                    致力于为客户提供最优质的产品和服务，打造行业领先的技术解决方案。  
-                </p>  
-                <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">  
-                    <div class="rounded-md shadow">  
-                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">  
-                            开始使用  
-                        </a>  
-                    </div>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenu.querySelector('.bg-white').classList.remove('-translate-x-full');
+            }, 10);
+        });
 
-    <!-- 特性介绍 -->  
-    <section class="py-12 bg-white">  
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  
-            <div class="lg:text-center">  
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">  
-                    我们的优势  
-                </h2>  
-                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">  
-                    专业的团队，优质的服务，创新的技术  
-                </p>  
-            </div>  
+        mobileMenu.querySelector('button').addEventListener('click', () => {
+            mobileMenu.querySelector('.bg-white').classList.add('-translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        });
 
-            <div class="mt-10">  
-                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">  
-                    <!-- 特性卡片 1 -->  
-                    <div class="p-6 bg-gray-50 rounded-lg">  
-                        <h3 class="text-lg font-medium text-gray-900">专业团队</h3>  
-                        <p class="mt-2 text-base text-gray-500">  
-                            拥有多年行业经验的专业团队，为您提供最优质的服务。  
-                        </p>  
-                    </div>  
+        // 添加页面加载动画  
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
 
-                    <!-- 特性卡片 2 -->  
-                    <div class="p-6 bg-gray-50 rounded-lg">  
-                        <h3 class="text-lg font-medium text-gray-900">创新技术</h3>  
-                        <p class="mt-2 text-base text-gray-500">  
-                            持续创新，不断突破，引领行业发展。  
-                        </p>  
-                    </div>  
+        // 添加交互动画  
+        const animateOnHover = (element, className) => {
+            element.addEventListener('mouseenter', () => {
+                element.classList.add(className);
+            });
+            element.addEventListener('mouseleave', () => {
+                element.classList.remove(className);
+            });
+        };
 
-                    <!-- 特性卡片 3 -->  
-                    <div class="p-6 bg-gray-50 rounded-lg">  
-                        <h3 class="text-lg font-medium text-gray-900">优质服务</h3>  
-                        <p class="mt-2 text-base text-gray-500">  
-                            24小时专业服务，随时解决您的问题。  
-                        </p>  
-                    </div>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
+        // 为所有卡片添加悬停效果  
+        document.querySelectorAll('.hover\\:shadow-xl').forEach(card => {
+            animateOnHover(card, 'shadow-xl');
+        });  
+    </script>
 
-    <!-- 页脚 -->  
-    <footer class="bg-gray-800">  
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">  
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">  
-                <div>  
-                    <h3 class="text-white text-lg font-bold mb-4">关于我们</h3>  
-                    <ul class="space-y-2">  
-                        <li><a href="#" class="text-gray-300 hover:text-white">公司简介</a></li>  
-                        <li><a href="#" class="text-gray-300 hover:text-white">发展历程</a></li>  
-                        <li><a href="#" class="text-gray-300 hover:text-white">团队介绍</a></li>  
-                    </ul>  
-                </div>  
-                <div>  
-                    <h3 class="text-white text-lg font-bold mb-4">产品服务</h3>  
-                    <ul class="space-y-2">  
-                        <li><a href="#" class="text-gray-300 hover:text-white">产品中心</a></li>  
-                        <li><a href="#" class="text-gray-300 hover:text-white">解决方案</a></li>  
-                        <li><a href="#" class="text-gray-300 hover:text-white">技术支持</a></li>  
-                    </ul>  
-                </div>  
-                <div>  
-                    <h3 class="text-white text-lg font-bold mb-4">联系我们</h3>  
-                    <ul class="space-y-2">  
-                        <li class="text-gray-300">电话：400-xxx-xxxx</li>  
-                        <li class="text-gray-300">邮箱：contact@example.com</li>  
-                        <li class="text-gray-300">地址：某某市某某区某某街道</li>  
-                    </ul>  
-                </div>  
-                <div>  
-                    <h3 class="text-white text-lg font-bold mb-4">关注我们</h3>  
-                    <div class="flex space-x-4">  
-                        <a href="#" class="text-gray-300 hover:text-white">  
-                            <span class="sr-only">微信</span>  
-                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">  
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>  
-                            </svg>  
-                        </a>  
-                    </div>  
-                </div>  
-            </div>  
-            <div class="mt-8 border-t border-gray-700 pt-8 text-center">  
-                <p class="text-gray-400">&copy; 2024 Company Name. All rights reserved.</p>  
-            </div>  
-        </div>  
-    </footer>  
-</body>  
+    <style>
+        /* 添加一些自定义动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .loaded {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* 添加平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* 禁止文本选择 */
+        .no-select {
+            user-select: none;
+        }
+
+        /* 图片加载动画 */
+        img {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* 添加文字渐变效果 */
+        .gradient-text {
+            background: linear-gradient(45deg, #4F46E5, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</body>
+
 </html>
