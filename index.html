@@ -38,6 +38,64 @@
         -webkit-text-fill-color: transparent;
       }
     </style>
+      <style>
+        /* 添加一些自定义动画 */
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+  
+          to {
+            opacity: 1;
+          }
+        }
+  
+        .loaded {
+          animation: fadeIn 1s ease-in-out;
+        }
+  
+        /* 添加平滑滚动 */
+        html {
+          scroll-behavior: smooth;
+        }
+  
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+  
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+  
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+  
+        ::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+  
+        /* 禁止文本选择 */
+        .no-select {
+          user-select: none;
+        }
+  
+        /* 图片加载动画 */
+        img {
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+        }
+  
+        /* 添加文字渐变效果 */
+        .gradient-text {
+          background: linear-gradient(45deg, #4f46e5, #06b6d4);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      </style>
   </head>
 
   <body class="bg-gray-50">
@@ -46,7 +104,7 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
           <div class="flex-shrink-0">
-            <span class="text-2xl font-bold gradient-text">TechCorp</span>
+            <span class="text-2xl font-bold gradient-text">DVS STRATEGIC VENTURES</span>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-center space-x-4">
@@ -320,7 +378,7 @@
                 </div>
                 <div>
                   <h3 class="font-bold text-lg">Contact Number</h3>
-                  <p class="text-gray-600">400-888-8888</p>
+                  <p class="text-gray-600">‪(352) 580-0122‬</p>
                 </div>
               </div>
             </div>
@@ -333,7 +391,7 @@
                 </div>
                 <div>
                   <h3 class="font-bold text-lg">Email</h3>
-                  <p class="text-gray-600">contact@example.com</p>
+                  <p class="text-gray-600">contact@dvs-strategic-ventures.com</p>
                 </div>
               </div>
             </div>
@@ -435,9 +493,9 @@
             <div class="h-48 bg-gray-200"></div>
             <div class="p-6">
               <div class="text-sm text-gray-500 mb-2">2024-12-18</div>
-              <h3 class="text-xl font-bold mb-2">Company Wins 2024 Innovation Award</h3>
+              <h3 class="text-xl font-bold mb-2">Company Wins 2025 Innovation Award</h3>
               <p class="text-gray-600 mb-4">
-                Our company was recently awarded at the 2024 Technology Innovation Conference for outstanding innovation capabilities...
+                Our company was recently awarded at the 2025 Technology Innovation Conference for outstanding innovation capabilities...
               </p>
               <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">Read More →</a>
             </div>
@@ -483,7 +541,7 @@
       <div class="max-w-7xl mx-auto px-4 py-16">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div class="space-y-4">
-            <h3 class="text-2xl font-bold gradient-text">TechCorp</h3>
+            <h3 class="text-2xl font-bold gradient-text">DVS STRATEGIC VENTURES</h3>
             <p class="text-gray-400">Committed to providing innovative technological solutions for enterprises, driving industrial digital transformation.</p>
             <div class="flex space-x-4">
               <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
@@ -563,7 +621,7 @@
           </div>
         </div>
         <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p class="text-gray-400">&copy; 2024 TechCorp. All rights reserved.</p>
+          <p class="text-gray-400">&copy; 2025 DVS STRATEGIC VENTURES. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -661,7 +719,7 @@
             <div class="bg-white h-screen w-64 transform -translate-x-full transition-transform duration-300">  
                 <div class="p-6">  
                     <div class="flex justify-between items-center mb-8">  
-                        <span class="text-2xl font-bold gradient-text">TechCorp</span>  
+                        <span class="text-2xl font-bold gradient-text">DVS STRATEGIC VENTURES</span>  
                         <button class="text-gray-700 hover:text-gray-900">  
                             <i class="fas fa-times text-2xl"></i>  
                         </button>  
@@ -713,63 +771,6 @@
       })
     </script>
 
-    <style>
-      /* 添加一些自定义动画 */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-
-        to {
-          opacity: 1;
-        }
-      }
-
-      .loaded {
-        animation: fadeIn 1s ease-in-out;
-      }
-
-      /* 添加平滑滚动 */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* 自定义滚动条 */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 4px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-
-      /* 禁止文本选择 */
-      .no-select {
-        user-select: none;
-      }
-
-      /* 图片加载动画 */
-      img {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-
-      /* 添加文字渐变效果 */
-      .gradient-text {
-        background: linear-gradient(45deg, #4f46e5, #06b6d4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-    </style>
+  
   </body>
 </html>
