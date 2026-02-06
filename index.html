@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DVS STRATEGIC VENTURES LLC - Inspiring Young Minds</title>
+    <title>DVS STRATEGIC VENTURES LLC - Innovative Software Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -29,69 +29,91 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .tech-gradient {
+        background: linear-gradient(270deg, #0ea5e9, #6366f1, #8b5cf6);
+        background-size: 400% 400%;
+        animation: gradient-shift 8s ease infinite;
+      }
+      .grid-pattern {
+        background-image: 
+          linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+      }
     </style>
   </head>
-  <body class="font-sans bg-gray-50">
+  <body class="font-sans bg-gray-900 text-gray-100">
     <!-- 固定导航栏 -->
-    <nav class="fixed w-full bg-white/80 backdrop-blur-lg shadow-lg z-50">
+    <nav class="fixed w-full bg-gray-900/90 backdrop-blur-lg border-b border-gray-800 shadow-lg z-50">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
           <div class="text-2xl font-bold gradient-text">DVS Strategic Ventures</div>
           <div class="hidden md:flex space-x-8">
             <a
               href="#home"
-              class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+              class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
               >Home</a
             >
             <a
-              href="#products"
-              class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
-              >Products</a
+              href="#services"
+              class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+              >Services</a
             >
             <a
-              href="#about"
-              class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
-              >About</a
+              href="#solutions"
+              class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
+              >Solutions</a
             >
             <a
               href="#contact"
-              class="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+              class="text-gray-300 hover:text-blue-400 transition-colors duration-300"
               >Contact</a
             >
           </div>
           <button
-            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
           >
-            Shop Now
+            Get Started
           </button>
         </div>
       </div>
     </nav>
 
     <!-- 英雄区域 -->
-    <section class="pt-32 pb-20 bg-gradient-to-b from-blue-50 to-white">
-      <div class="container mx-auto px-4">
+    <section id="home" class="pt-32 pb-20 bg-gray-900 grid-pattern relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-transparent"></div>
+      <div class="container mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row items-center justify-between">
           <div class="md:w-1/2" data-aos="fade-right">
-            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Where Learning Meets <span class="gradient-text">Magic</span>
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+              Building the <span class="gradient-text">Future</span> of Software
             </h1>
-            <p class="text-xl text-gray-600 mb-8">
-              Transform ordinary moments into extraordinary discoveries. Our
-              carefully curated collection of educational toys and magical
-              supplies sparks creativity, nurtures curiosity, and brings wonder
-              to learning.
+            <p class="text-xl text-gray-300 mb-8">
+              Transform your business with cutting-edge software solutions. We deliver 
+              enterprise-grade applications, cloud infrastructure, and AI-powered systems 
+              that drive innovation and accelerate growth.
             </p>
             <div class="flex space-x-4">
               <button
-                class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors duration-300 transform hover:-translate-y-1"
+                class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
               >
-                Explore Collection
+                Explore Solutions
               </button>
               <button
-                class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition-colors duration-300"
+                class="border-2 border-blue-500 text-blue-400 px-8 py-3 rounded-full hover:bg-blue-500/10 transition-all duration-300"
               >
-                Learn More
+                View Case Studies
               </button>
             </div>
           </div>
@@ -106,20 +128,54 @@
     </section>
 
     <!-- 特色产品区域 -->
-    <section class="py-20">
+    <section id="services" class="py-20 bg-gray-800">
       <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
-          Discover Our <span class="gradient-text">Featured Collections</span>
+          Our <span class="gradient-text">Core Services</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 教育玩具卡片 -->
+          <!-- Cloud Solutions -->
           <div class="group relative" data-aos="fade-up" data-aos-delay="100">
             <div
-              class="bg-white rounded-2xl shadow-xl p-8 transform group-hover:-translate-y-2 transition-all duration-300"
+              class="bg-gray-900 border border-gray-700 rounded-2xl p-8 transform group-hover:-translate-y-2 group-hover:border-blue-500 transition-all duration-300"
             >
               <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                 <div
-                  class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center"
+                  class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mt-6 mb-4 text-white">
+                Cloud Solutions
+              </h3>
+              <p class="text-gray-400 text-center">
+                Scalable cloud infrastructure, migration services, and DevOps automation 
+                to power your digital transformation journey.
+              </p>
+            </div>
+          </div>
+
+          <!-- AI & Machine Learning -->
+          <div class="group relative" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="bg-gray-900 border border-gray-700 rounded-2xl p-8 transform group-hover:-translate-y-2 group-hover:border-purple-500 transition-all duration-300"
+            >
+              <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                <div
+                  class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
                 >
                   <svg
                     class="w-8 h-8 text-white"
@@ -136,58 +192,24 @@
                   </svg>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold text-center mt-6 mb-4">
-                Educational Adventures
+              <h3 class="text-2xl font-bold text-center mt-6 mb-4 text-white">
+                AI & Machine Learning
               </h3>
-              <p class="text-gray-600 text-center">
-                Immersive STEM kits, interactive puzzles, and hands-on
-                experiments that make learning an exciting journey of discovery.
+              <p class="text-gray-400 text-center">
+                Harness the power of artificial intelligence with custom ML models, 
+                predictive analytics, and intelligent automation solutions.
               </p>
             </div>
           </div>
 
-          <!-- 新奇物品卡片 -->
-          <div class="group relative" data-aos="fade-up" data-aos-delay="200">
-            <div
-              class="bg-white rounded-2xl shadow-xl p-8 transform group-hover:-translate-y-2 transition-all duration-300"
-            >
-              <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                <div
-                  class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center"
-                >
-                  <svg
-                    class="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <h3 class="text-2xl font-bold text-center mt-6 mb-4">
-                Curiosity Cabinet
-              </h3>
-              <p class="text-gray-600 text-center">
-                Unique gadgets, mind-bending illusions, and fascinating
-                collectibles that spark wonder and imagination.
-              </p>
-            </div>
-          </div>
-
-          <!-- 魔术用品卡片 -->
+          <!-- Custom Software Development -->
           <div class="group relative" data-aos="fade-up" data-aos-delay="300">
             <div
-              class="bg-white rounded-2xl shadow-xl p-8 transform group-hover:-translate-y-2 transition-all duration-300"
+              class="bg-gray-900 border border-gray-700 rounded-2xl p-8 transform group-hover:-translate-y-2 group-hover:border-indigo-500 transition-all duration-300"
             >
               <div class="absolute -top-6 left-1/2 transform -translate-x-1/2">
                 <div
-                  class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center"
+                  class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center"
                 >
                   <svg
                     class="w-8 h-8 text-white"
@@ -199,17 +221,17 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                     />
                   </svg>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold text-center mt-6 mb-4">
-                Magic Mastery
+              <h3 class="text-2xl font-bold text-center mt-6 mb-4 text-white">
+                Custom Development
               </h3>
-              <p class="text-gray-600 text-center">
-                Professional magic supplies, beginner-friendly trick sets, and
-                performance essentials for aspiring magicians.
+              <p class="text-gray-400 text-center">
+                Enterprise applications, web platforms, and mobile solutions 
+                tailored to your unique business requirements and goals.
               </p>
             </div>
           </div>
@@ -218,7 +240,7 @@
     </section>
 
     <!-- 为什么选择我们 -->
-    <section class="py-20 bg-gray-50">
+    <section id="solutions" class="py-20 bg-gray-900">
       <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
           Why Choose <span class="gradient-text">DVS Strategic Ventures</span>
@@ -226,57 +248,57 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- 特点1 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg"
+            class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-blue-500 transition-all duration-300"
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <div class="text-blue-600 text-4xl font-bold mb-4">01</div>
-            <h3 class="text-xl font-bold mb-2">Curated Excellence</h3>
-            <p class="text-gray-600">
-              Each product is carefully selected to ensure quality, educational
-              value, and endless entertainment.
+            <div class="text-blue-500 text-4xl font-bold mb-4">01</div>
+            <h3 class="text-xl font-bold mb-2 text-white">Enterprise-Grade Quality</h3>
+            <p class="text-gray-400">
+              Battle-tested solutions built with industry best practices, 
+              ensuring reliability, security, and scalability for mission-critical applications.
             </p>
           </div>
 
           <!-- 特点2 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg"
+            class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-purple-500 transition-all duration-300"
             data-aos="zoom-in"
             data-aos-delay="200"
           >
-            <div class="text-blue-600 text-4xl font-bold mb-4">02</div>
-            <h3 class="text-xl font-bold mb-2">Expert Support</h3>
-            <p class="text-gray-600">
-              Our team of educators and magicians provides guidance and support
-              for all skill levels.
+            <div class="text-purple-500 text-4xl font-bold mb-4">02</div>
+            <h3 class="text-xl font-bold mb-2 text-white">Expert Engineering Team</h3>
+            <p class="text-gray-400">
+              World-class developers and architects with deep expertise in 
+              cloud-native technologies, AI/ML, and modern software development.
             </p>
           </div>
 
           <!-- 特点3 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg"
+            class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-indigo-500 transition-all duration-300"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
-            <div class="text-blue-600 text-4xl font-bold mb-4">03</div>
-            <h3 class="text-xl font-bold mb-2">Innovation Focus</h3>
-            <p class="text-gray-600">
-              We continuously update our collection with the latest educational
-              tools and magical innovations.
+            <div class="text-indigo-500 text-4xl font-bold mb-4">03</div>
+            <h3 class="text-xl font-bold mb-2 text-white">Innovation-Driven</h3>
+            <p class="text-gray-400">
+              Leveraging cutting-edge technologies and methodologies to deliver 
+              innovative solutions that keep you ahead of the competition.
             </p>
           </div>
 
           <!-- 特点4 -->
           <div
-            class="bg-white p-6 rounded-xl shadow-lg"
+            class="bg-gray-800 border border-gray-700 p-6 rounded-xl hover:border-cyan-500 transition-all duration-300"
             data-aos="zoom-in"
             data-aos-delay="400"
           >
-            <div class="text-blue-600 text-4xl font-bold mb-4">04</div>
-            <h3 class="text-xl font-bold mb-2">Global Community</h3>
-            <p class="text-gray-600">
-              Join our worldwide community of learners, creators, and magic
-              enthusiasts.
+            <div class="text-cyan-500 text-4xl font-bold mb-4">04</div>
+            <h3 class="text-xl font-bold mb-2 text-white">Agile & Transparent</h3>
+            <p class="text-gray-400">
+              Collaborative development process with continuous communication, 
+              rapid iterations, and full transparency throughout the project lifecycle.
             </p>
           </div>
         </div>
@@ -284,16 +306,16 @@
     </section>
 
     <!-- 联系部分 -->
-    <section class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-gray-800">
       <div class="container mx-auto px-4">
         <div
-          class="max-w-4xl mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl p-12 text-white text-center"
+          class="max-w-4xl mx-auto tech-gradient rounded-3xl p-12 text-white text-center"
           data-aos="fade-up"
         >
-          <h2 class="text-4xl font-bold mb-6">Ready to Begin Your Journey?</h2>
+          <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p class="text-xl mb-8">
-            Join our community and discover the perfect blend of education and
-            entertainment.
+            Let's discuss how our innovative software solutions can accelerate 
+            your digital transformation and drive measurable results.
           </p>
           <form class="max-w-md mx-auto space-y-4">
             <input
@@ -302,9 +324,9 @@
               class="w-full px-6 py-3 rounded-full bg-white/20 backdrop-blur-lg text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50"
             />
             <button
-              class="w-full bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors duration-300"
+              class="w-full bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors duration-300"
             >
-              Get Started
+              Schedule Consultation
             </button>
           </form>
         </div>
@@ -312,32 +334,32 @@
     </section>
 
     <!-- 页脚 -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-black text-white py-12 border-t border-gray-800">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 class="text-2xl font-bold mb-4">DVS</h3>
+            <h3 class="text-2xl font-bold mb-4 gradient-text">DVS</h3>
             <p class="text-gray-400">
-              Inspiring young minds through educational innovation and magical
-              experiences.
+              Empowering businesses with cutting-edge software solutions 
+              and innovative technology services.
             </p>
           </div>
           <div>
-            <h4 class="text-lg font-bold mb-4">Products</h4>
+            <h4 class="text-lg font-bold mb-4">Services</h4>
             <ul class="space-y-2 text-gray-400">
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Educational Toys</a
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Cloud Solutions</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Magic Supplies</a
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >AI & Machine Learning</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Novelty Items</a
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Custom Development</a
                 >
               </li>
             </ul>
@@ -346,18 +368,18 @@
             <h4 class="text-lg font-bold mb-4">Company</h4>
             <ul class="space-y-2 text-gray-400">
               <li>
-                <a href="#" class="hover:text-white transition-colors"
+                <a href="#" class="hover:text-blue-400 transition-colors"
                   >About Us</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
+                <a href="#" class="hover:text-blue-400 transition-colors"
                   >Careers</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Partners</a
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Case Studies</a
                 >
               </li>
             </ul>
@@ -366,18 +388,18 @@
             <h4 class="text-lg font-bold mb-4">Connect</h4>
             <ul class="space-y-2 text-gray-400">
               <li>
-                <a href="#" class="hover:text-white transition-colors"
+                <a href="#" class="hover:text-blue-400 transition-colors"
                   >Contact</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Newsletter</a
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Support</a
                 >
               </li>
               <li>
-                <a href="#" class="hover:text-white transition-colors"
-                  >Social Media</a
+                <a href="#" class="hover:text-blue-400 transition-colors"
+                  >Partners</a
                 >
               </li>
             </ul>
@@ -394,7 +416,7 @@
     <!-- 回到顶部按钮 -->
     <button
       id="backToTop"
-      class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-blue-700"
+      class="fixed bottom-8 right-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:from-blue-700 hover:to-purple-700"
     >
       <svg
         class="w-6 h-6"
@@ -414,10 +436,10 @@
     <!-- 加载动画 -->
     <div
       id="loader"
-      class="fixed inset-0 bg-white z-50 flex items-center justify-center"
+      class="fixed inset-0 bg-gray-900 z-50 flex items-center justify-center"
     >
       <div
-        class="animate-spin rounded-full h-32 w-32 border-b-4 border-blue-600"
+        class="animate-spin rounded-full h-32 w-32 border-b-4 border-blue-500"
       ></div>
     </div>
 
@@ -430,13 +452,13 @@
         easing: "ease-out-cubic",
       });
 
-      // Lottie 动画配置
+      // Lottie 动画配置 - 使用科技主题动画
       const heroAnimation = lottie.loadAnimation({
         container: document.getElementById("heroAnimation"),
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "https://assets2.lottiefiles.com/packages/lf20_kkflmtur.json", // 这里可以替换成其他动画JSON
+        path: "https://assets5.lottiefiles.com/packages/lf20_qp1q7mct.json", // 科技/数据动画
       });
 
       // 页面加载完成后隐藏加载动画
